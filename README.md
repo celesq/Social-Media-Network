@@ -120,3 +120,34 @@ Developed a social media platform using data structures for user connections and
         Finds the largest group of mutual friends that includes the user.
         Example: common-group John
         Output: Lists all users in John's largest friend group.
+
+# Brief explanation of the implementation
+
+ ## Social Network
+
+  ### Add Friend: Established a connection between two users using the add_edge function.
+  ### Remove Friend: Removed the connection between two users with remove_edge.
+  ### Find Distance: Used BFS to calculate the shortest path between users.
+  ### Suggestions: Modified BFS to run for two iterations, tracking visited users and avoiding direct friends.
+  ### Common Friends: Checked mutual friends by comparing the adjacency lists of two users.
+  ### Number of Friends: Displayed the number of nodes in a user’s adjacency list.
+  ### Most Popular: Found the user with the most direct friends by comparing adjacency list sizes.
+
+ ## Posts and Reposts
+
+  ### Data Structures: Created a post_t structure for posts/reposts and a tree_t structure for hierarchical relationships. Used an aprecieri structure to store likes.
+  ### Create Post: Added a new post_t entry with relevant fields (name, UID, ID).
+  ### Repost: Similar to post creation, but the title is NULL, and the parent ID is linked to the original post.
+  ### First Common Repost: Traversed both reposts' paths to the root to find the first common node.
+  ### Like: Managed likes by adding/removing users from the likes list and adjusting like counts accordingly.
+  ### Ratio: Checked if any repost had more likes than the original post and displayed the result.
+  ### Delete Post/Repost: Used a recursive delete_repost function to delete all children of a post/repost.
+  ### Get Likes: Displayed the number of likes for a post or repost.
+  ### Get Reposts: Displayed the full repost hierarchy of a post.
+
+## Social Feed
+
+  ### Feed: Iterated through posts/reposts from end to start and checked if they belonged to friends.
+  ### View Profile: Displayed all posts and reposts made by a user.
+  ### Friends That Reposted: Searched the post’s tree to see if any friends reposted it.
+  ### Clique Detection: Implemented the Bron-Kerbosch algorithm to find and display the largest friend clique.
