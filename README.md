@@ -126,6 +126,7 @@ Developed a social media platform using data structures for user connections and
  ## Social Network
 
   Add Friend: Established a connection between two users using the add_edge function.
+  
   Remove Friend: Removed the connection between two users with remove_edge.
   Find Distance: Used BFS to calculate the shortest path between users.
   Suggestions: Modified BFS to run for two iterations, tracking visited users and avoiding direct friends.
