@@ -1,0 +1,132 @@
+
+# Tema 3 SDA - Social Media
+## Membrii echipei:
+- Svaicovschi Bogdan-Gabriel 312 Ca
+- Celescu Rares Andrei 312 Ca
+
+## Task 1 - Friends
+
+- Am folosit functiile din laborator pentru grafuri 
+
+### Adauga prieten
+-  Am creat legatura dintre doi useri
+    folosind functia add_edge
+
+### Elimina prieten
+-  Am eliminat legatura dintre doi useri
+    folosind functia remove_edge
+
+### Afla distanta
+-  Am folosit algoritmul din laborator de a
+    calcula drumul minim (facem un bfs)
+
+### Sugestii
+- Am modificat un bfs astfel incat sa aiba 
+    doar 2 iteratii , iar noi vom tine minte
+    userii vizitati intr-un vector visited
+    astfel incat sa nu afisam prieteni directi
+    ai userului dat sau useri deja recomandati
+
+### Prieteni Comuni
+- Parcurgem prietenii userului 1 si verificam 
+    daca sunt prieteni cu userul 2
+
+### Numar de prieteni
+- Afisam nr de noduri din lista de adiacenta
+    a userului
+
+### Cel mai popular
+- Cautam prietenul cu cele mai multe noduri 
+    din lista de adiacenta a userului care au
+    legatura directa cu acesta (fie e el, 
+    fie sunt prieteni directi)
+
+## Task 2
+- Am facut un vector de structuri post_t in
+    care tinem atat posturile, cat si reposturile
+
+-  Am creat un struct tree_t ce reprezinta 
+    structura de arbore (tine minte parintele ,
+    copii si numarul lor)
+
+-  Am creat si un struct aprecieri care contine 
+    numarul de like-uri , dar si id userilor care
+    au apreciat
+
+### Creeaza o postare
+-  Adaugam in vectorul de structuri un nou
+    post_t care va avea nume  , un uid(user id),
+    un id si initializam cele doua structuri
+    ajutatoare
+
+### Repost
+- Ca la crearea unei postari , numai ca 
+    titlul va fi NULL , iar repostul va avea 
+    ca parinte id-ul furnizat , iar tatalui i se
+    va incrementa numarul copiilor si va adauga 
+    in vector id-ul repostului
+
+### Primul repost comun
+-  Parcurgem de la rid1(repost id) tot drumu
+    catre root , iar dupa facem acelasi lucru si 
+    pentru rid2 pana ce gasim un nod comun
+
+### Like
+-  Cautam daca userul a apreciat deja postul sau
+    repostul , daca exista decrementam likeurile 
+    si eliminam userul din likes , altfel vom
+    incrementa numarul de likeuri si adaugam
+    userul in vector
+
+### Ratio
+-  Cautam daca un post are mai multe aprecieri
+    decat toate reposturile directe ale acestuia
+    Daca are , vom afisa conform  cerintei
+
+### Delete Post/Repost
+-  Pentru aceasta am facut o functie recursiva 
+    delete_repost care elimina toti copii unui
+    repost/post
+    Functia delete_post verifica daca e o postare
+    sau repostare
+    Daca e postare , aplica direct functia 
+    delete_repost
+    Daca e repostare , ii eliminam legatura cu
+    parintele (ne ducem la parent si il scoatem
+    din vectorul de copii si decrementam nr lor),
+    iar apoi  vom apela functia delete_repost
+
+### Get Likes
+-  Afisam numarul de like-uri
+
+### Get reposts
+- Afisam postul cerut (sau repost) si toti       urmasii sai
+
+## Task 3
+-  Parcurgem de la sfarsit spre inceput vectorul
+    de posturi/reposturi si verificam daca apartin prietenilor
+
+### View profile
+-  Afisam toate postarile sau repostarile
+    userului in ordinea in care au fost facute
+
+### Friends that reposted
+-  Cautam in arborele post id-ului daca vreun 
+    prieten de-al userului a repostat postarea
+    respectiva
+
+### Clica 
+- Am implementat pseudocodul de pe wikipedia in
+functia BronKerbosch , iar aceasta e apelata in
+common_group , unde se afla si afisarea
+
+
+## Bibliografie
+- laboratorul de sda + probleme de pe lambda
+checker
+- [Algoritmul BronKerbosch](https://en.wikipedia.org/wiki/Bron%E2%80%93Kerbosch_algorithm#Without_pivoting)
+
+
+
+
+
