@@ -1,0 +1,202 @@
+./posts.c:16: CHECK:BRACES: braces {} should be used on all arms of this statement
+./posts.c:99: WARNING:LONG_FUNCTION: 'handle_input_posts' function definition is 90 lines, perhaps refactor
+./graphlist.c:7: CHECK:MACRO_ARG_REUSE: Macro argument reuse 'x' - possible side-effects?
+./graphlist.c:7: CHECK:MACRO_ARG_REUSE: Macro argument reuse 'y' - possible side-effects?
+./graphlist.c:34: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./graphlist.c:44: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./graphlist.c:62: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./graphlist.c:67: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./graphlist.c:84: CHECK:COMPARISON_TO_NULL: Comparison to NULL could be written "!prev"
+./graphlist.c:106: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./graphlist.c:111: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./graphlist.c:123: CHECK:COMPARISON_TO_NULL: Comparison to NULL could be written "!prev"
+./graphlist.c:141: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./graphlist.c:156: CHECK:CAMELCASE: Avoid CamelCase: <currNode>
+./graphlist.c:158: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./graphlist.c:183: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./graphlist.c:188: CHECK:COMPARISON_TO_NULL: Comparison to NULL could be written "curr"
+./graphlist.c:205: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./graphlist.c:210: CHECK:COMPARISON_TO_NULL: Comparison to NULL could be written "curr"
+./graphlist.c:243: CHECK:OPEN_ENDED_LINE: Lines should not end with a '('
+./graphlist.c:244: CHECK:LONG_LINE: line length of 117 exceeds 80 columns
+./functions.c:13: CHECK:LONG_LINE: line length of 81 exceeds 80 columns
+./functions.c:30: CHECK:LONG_LINE: line length of 87 exceeds 80 columns
+./functions.c:32: CHECK:LONG_LINE: line length of 110 exceeds 80 columns
+./functions.c:52: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./functions.c:56: CHECK:LONG_LINE: line length of 106 exceeds 80 columns
+./functions.c:58: CHECK:LONG_LINE: line length of 98 exceeds 80 columns
+./functions.c:90: CHECK:BRACES: braces {} should be used on all arms of this statement
+./functions.c:92: CHECK:BRACES: Unbalanced braces around else statement
+./functions.c:108: CHECK:LONG_LINE: line length of 114 exceeds 80 columns
+./functions.c:117: CHECK:LONG_LINE: line length of 91 exceeds 80 columns
+./functions.c:122: CHECK:LONG_LINE: line length of 83 exceeds 80 columns
+./functions.c:134: CHECK:LONG_LINE: line length of 85 exceeds 80 columns
+./functions.c:143: CHECK:LONG_LINE: line length of 99 exceeds 80 columns
+./feed.h:11: CHECK:LONG_LINE: line length of 87 exceeds 80 columns
+./feed.h:13: WARNING:MISSING_EOF_NEWLINE: adding a line without newline at end of file
+./users.h:33: ERROR:CODE_INDENT: code indent should use tabs where possible
+./users.h:33: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./users.h:33: WARNING:SUSPECT_CODE_INDENT: suspect code indent for conditional statements (8, 16)
+./users.h:34: ERROR:CODE_INDENT: code indent should use tabs where possible
+./users.h:34: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./users.h:34: WARNING:SUSPECT_CODE_INDENT: suspect code indent for conditional statements (16, 24)
+./users.h:35: ERROR:CODE_INDENT: code indent should use tabs where possible
+./users.h:35: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./users.h:36: ERROR:CODE_INDENT: code indent should use tabs where possible
+./users.h:36: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./users.h:37: ERROR:CODE_INDENT: code indent should use tabs where possible
+./users.h:37: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./users.h:38: ERROR:CODE_INDENT: code indent should use tabs where possible
+./users.h:38: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./users.h:39: ERROR:CODE_INDENT: code indent should use tabs where possible
+./users.h:39: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./users.h:40: ERROR:CODE_INDENT: code indent should use tabs where possible
+./users.h:40: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./users.h:67: ERROR:SPACING: space required after that close brace '}'
+./users.h:136: ERROR:SPACING: space required after that close brace '}'
+./users.h:168: CHECK:LONG_LINE: line length of 90 exceeds 80 columns
+./users.h:182: CHECK:LONG_LINE: line length of 124 exceeds 80 columns
+./users.h:182: CHECK:CAMELCASE: Avoid CamelCase: <BronKerbosch>
+./friends.c:18: WARNING:QUOTED_WHITESPACE_BEFORE_NEWLINE: unnecessary whitespace before a quoted newline
+./friends.c:21: WARNING:QUOTED_WHITESPACE_BEFORE_NEWLINE: unnecessary whitespace before a quoted newline
+./feed.c:8: CHECK:LONG_LINE: line length of 86 exceeds 80 columns
+./feed.c:18: WARNING:QUOTED_WHITESPACE_BEFORE_NEWLINE: unnecessary whitespace before a quoted newline
+./feed.c:20: WARNING:QUOTED_WHITESPACE_BEFORE_NEWLINE: unnecessary whitespace before a quoted newline
+./feed.c:26: WARNING:QUOTED_WHITESPACE_BEFORE_NEWLINE: unnecessary whitespace before a quoted newline
+./feed.c:32: WARNING:QUOTED_WHITESPACE_BEFORE_NEWLINE: unnecessary whitespace before a quoted newline
+./feed.c:34: WARNING:QUOTED_WHITESPACE_BEFORE_NEWLINE: unnecessary whitespace before a quoted newline
+./feed.c:36: CHECK:LONG_LINE_COMMENT: line length of 93 exceeds 80 columns
+./feed.c:41: WARNING:QUOTED_WHITESPACE_BEFORE_NEWLINE: unnecessary whitespace before a quoted newline
+./graphlist.h:5: ERROR:CODE_INDENT: code indent should use tabs where possible
+./graphlist.h:5: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./graphlist.h:5: WARNING:SUSPECT_CODE_INDENT: suspect code indent for conditional statements (8, 16)
+./graphlist.h:6: ERROR:CODE_INDENT: code indent should use tabs where possible
+./graphlist.h:6: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./graphlist.h:6: WARNING:SUSPECT_CODE_INDENT: suspect code indent for conditional statements (16, 24)
+./graphlist.h:7: ERROR:CODE_INDENT: code indent should use tabs where possible
+./graphlist.h:7: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./graphlist.h:8: ERROR:CODE_INDENT: code indent should use tabs where possible
+./graphlist.h:8: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./graphlist.h:9: ERROR:CODE_INDENT: code indent should use tabs where possible
+./graphlist.h:9: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./graphlist.h:10: ERROR:CODE_INDENT: code indent should use tabs where possible
+./graphlist.h:10: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./graphlist.h:11: ERROR:CODE_INDENT: code indent should use tabs where possible
+./graphlist.h:11: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./graphlist.h:12: ERROR:CODE_INDENT: code indent should use tabs where possible
+./graphlist.h:12: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./graphlist.h:37: ERROR:SPACING: space required after that close brace '}'
+./users.c:134: CHECK:MACRO_ARG_REUSE: Macro argument reuse 'x' - possible side-effects?
+./users.c:134: CHECK:MACRO_ARG_REUSE: Macro argument reuse 'y' - possible side-effects?
+./users.c:160: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:170: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:231: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:236: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:248: CHECK:COMPARISON_TO_NULL: Comparison to NULL could be written "!prev"
+./users.c:266: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:281: CHECK:CAMELCASE: Avoid CamelCase: <currNode>
+./users.c:283: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:308: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:313: CHECK:COMPARISON_TO_NULL: Comparison to NULL could be written "curr"
+./users.c:330: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:335: CHECK:COMPARISON_TO_NULL: Comparison to NULL could be written "curr"
+./users.c:368: CHECK:OPEN_ENDED_LINE: Lines should not end with a '('
+./users.c:369: CHECK:LONG_LINE: line length of 117 exceeds 80 columns
+./users.c:402: CHECK:OPEN_ENDED_LINE: Lines should not end with a '('
+./users.c:403: CHECK:LONG_LINE: line length of 117 exceeds 80 columns
+./users.c:406: CHECK:COMPARISON_TO_NULL: Comparison to NULL could be written "find_node"
+./users.c:412: CHECK:OPEN_ENDED_LINE: Lines should not end with a '('
+./users.c:423: CHECK:OPEN_ENDED_LINE: Lines should not end with a '('
+./users.c:424: CHECK:LONG_LINE: line length of 117 exceeds 80 columns
+./users.c:555: CHECK:LONG_LINE: line length of 81 exceeds 80 columns
+./users.c:562: CHECK:LONG_LINE: line length of 83 exceeds 80 columns
+./users.c:573: CHECK:LONG_LINE: line length of 87 exceeds 80 columns
+./users.c:575: CHECK:LONG_LINE: line length of 110 exceeds 80 columns
+./users.c:596: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:601: CHECK:LONG_LINE: line length of 106 exceeds 80 columns
+./users.c:603: CHECK:LONG_LINE: line length of 98 exceeds 80 columns
+./users.c:636: CHECK:BRACES: braces {} should be used on all arms of this statement
+./users.c:638: CHECK:BRACES: Unbalanced braces around else statement
+./users.c:649: ERROR:SPACING: space required after that close brace '}'
+./users.c:664: CHECK:LONG_LINE: line length of 114 exceeds 80 columns
+./users.c:683: CHECK:LONG_LINE: line length of 92 exceeds 80 columns
+./users.c:688: CHECK:LONG_LINE: line length of 83 exceeds 80 columns
+./users.c:700: CHECK:LONG_LINE: line length of 85 exceeds 80 columns
+./users.c:709: CHECK:LONG_LINE: line length of 99 exceeds 80 columns
+./users.c:722: CHECK:LONG_LINE: line length of 93 exceeds 80 columns
+./users.c:738: CHECK:LONG_LINE: line length of 121 exceeds 80 columns
+./users.c:743: CHECK:LONG_LINE: line length of 121 exceeds 80 columns
+./users.c:746: CHECK:BRACES: Blank lines aren't necessary before a close brace '}'
+./users.c:747: CHECK:LONG_LINE: line length of 94 exceeds 80 columns
+./users.c:762: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:762: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:763: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:771: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:771: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:772: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:781: CHECK:BRACES: Blank lines aren't necessary before a close brace '}'
+./users.c:785: CHECK:LONG_LINE: line length of 81 exceeds 80 columns
+./users.c:787: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:787: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:787: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:797: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:797: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:805: CHECK:LONG_LINE: line length of 131 exceeds 80 columns
+./users.c:806: CHECK:LONG_LINE: line length of 86 exceeds 80 columns
+./users.c:807: CHECK:LONG_LINE: line length of 90 exceeds 80 columns
+./users.c:809: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:809: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:809: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:810: CHECK:LONG_LINE: line length of 88 exceeds 80 columns
+./users.c:813: CHECK:LONG_LINE: line length of 131 exceeds 80 columns
+./users.c:814: CHECK:LONG_LINE: line length of 92 exceeds 80 columns
+./users.c:816: CHECK:BRACES: Blank lines aren't necessary before a close brace '}'
+./users.c:819: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:819: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:827: CHECK:LONG_LINE: line length of 131 exceeds 80 columns
+./users.c:828: CHECK:LONG_LINE: line length of 86 exceeds 80 columns
+./users.c:829: CHECK:LONG_LINE: line length of 92 exceeds 80 columns
+./users.c:831: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:831: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:831: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:832: CHECK:LONG_LINE: line length of 88 exceeds 80 columns
+./users.c:835: CHECK:LONG_LINE: line length of 131 exceeds 80 columns
+./users.c:836: CHECK:LONG_LINE: line length of 94 exceeds 80 columns
+./users.c:843: CHECK:BRACES: braces {} should be used on all arms of this statement
+./users.c:844: CHECK:LONG_LINE: line length of 93 exceeds 80 columns
+./users.c:846: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:846: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:846: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:850: CHECK:BRACES: Unbalanced braces around else statement
+./users.c:853: CHECK:LINE_SPACING: Please don't use multiple blank lines
+./users.c:854: CHECK:BRACES: Blank lines aren't necessary before a close brace '}'
+./users.c:859: CHECK:LONG_LINE: line length of 99 exceeds 80 columns
+./users.c:861: CHECK:LONG_LINE: line length of 95 exceeds 80 columns
+./users.c:863: CHECK:BRACES: Blank lines aren't necessary before a close brace '}'
+./users.c:868: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:868: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:869: CHECK:LONG_LINE: line length of 106 exceeds 80 columns
+./users.c:877: CHECK:BRACES: Blank lines aren't necessary before a close brace '}'
+./users.c:882: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:900: CHECK:LONG_LINE: line length of 84 exceeds 80 columns
+./users.c:914: CHECK:LONG_LINE: line length of 89 exceeds 80 columns
+./users.c:924: CHECK:LONG_LINE: line length of 89 exceeds 80 columns
+./users.c:927: CHECK:LONG_LINE: line length of 88 exceeds 80 columns
+./users.c:931: CHECK:LONG_LINE: line length of 92 exceeds 80 columns
+./users.c:951: CHECK:BRACES: braces {} should be used on all arms of this statement
+./users.c:953: CHECK:BRACES: Unbalanced braces around else statement
+./users.c:965: CHECK:LONG_LINE: line length of 91 exceeds 80 columns
+./users.c:971: CHECK:BRACES: Blank lines aren't necessary before a close brace '}'
+./users.c:977: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:977: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:980: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:980: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:981: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:981: ERROR:SPACING: space required after that ';' (ctx:VxV)
+./users.c:989: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./users.c:1044: CHECK:COMPARISON_TO_NULL: Comparison to NULL could be written "current_top"
+./users.c:1061: CHECK:LONG_LINE: line length of 123 exceeds 80 columns
+./users.c:1061: CHECK:CAMELCASE: Avoid CamelCase: <BronKerbosch>
+./users.c:1072: CHECK:LONG_LINE: line length of 89 exceeds 80 columns
+./users.c:1098: CHECK:UNNECESSARY_PARENTHESES: Unnecessary parentheses around 'neighbor_node->data'
+./users.c:1112: CHECK:UNNECESSARY_PARENTHESES: Unnecessary parentheses around 'neighbor_node->data'
