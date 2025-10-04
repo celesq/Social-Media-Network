@@ -1,126 +1,129 @@
 # Social-Media-Network
-Developed a social media platform in **C**, simulating user connections, post management, and personalized feeds using **graphs** and **trees**.  
-The project allows users to add or remove friends, compute distances between users, create and repost content, like posts, view feeds, and even detect cliques (fully connected friend groups).  
-The implementation focuses on modularity, efficient data structures, and correct memory management — all logic is handled programmatically with no GUI.
+I developed the core functionality of a social media platform in **C**, simulating user connections, posts, reposts, likes, feeds, and clique detection using **graphs**, **trees**, and **linked lists**.  
+The project models the internal logic of a real social platform, where users can connect with friends, share and repost content, view their personalized feeds, and interact with other users.  
+All operations are implemented programmatically, without any GUI, focusing on efficiency, modularity, and memory safety.
 
 # How to Use the Social Media Platform
 
   ## Adding and Removing Friends
-      Command: add <name1> <name2>
+      Command: ADD <user1> <user2>
       Creates a bidirectional friendship between two users.
 
-      Example: add Mihai Andrei
-      Output: Added connection Mihai - Andrei
+      Example: ADD Michael Andrew
+      Output: Added connection Michael - Andrew
 
-      Command: remove <name1> <name2>
+      Command: REMOVE <user1> <user2>
       Removes the friendship between two users.
 
-      Example: remove Mihai Andrei
-      Output: Removed connection Mihai - Andrei
+      Example: REMOVE Michael Andrew
+      Output: Removed connection Michael - Andrew
 
   ## Finding Distance Between Users
-      Command: distance <name1> <name2>
-      Calculates the distance between two users using BFS (Breadth-First Search).
+      Command: DISTANCE <user1> <user2>
+      Calculates the number of friendship links between two users using BFS (Breadth-First Search).
 
-      Example: distance Mihai Mihnea
-      Output: The distance between Mihai - Mihnea is 3
-      If no path exists: There is no way to get from Mihai to Mihnea
+      Example: DISTANCE Michael Matthew
+      Output: The distance between Michael - Matthew is 3
+
+      If no connection exists:
+      Output: There is no way to get from Michael to Matthew
 
   ## Friend Suggestions
-      Command: suggestions <name>
-      Displays all “friends of friends” who are not already friends with the user.
+      Command: SUGGESTIONS <user>
+      Displays all “friends of friends” who are not already friends with the given user.
 
-      Example: suggestions Alex
+      Example: SUGGESTIONS Alex
       Output:
       Suggestions for Alex:
       Maria
-      Mihai
-      Vlad
+      Mark
+      Victor
 
   ## Common Friends
-      Command: common <name1> <name2>
+      Command: COMMON <user1> <user2>
       Displays all mutual friends between two users.
 
-      Example: common Alex Ana
+      Example: COMMON Alex Anna
       Output:
-      The common friends between Alex and Ana are:
-      Andrei
+      The common friends between Alex and Anna are:
+      Andrew
       Maria
-      Ioana
+      John
 
   ## Counting and Ranking Friends
-      Command: friends <name>
-      Displays how many friends a user has.
+      Command: FRIENDS <user>
+      Displays the number of friends for a user.
 
-      Example: friends Andrei
-      Output: Andrei has 5 friends
+      Example: FRIENDS Andrew
+      Output: Andrew has 5 friends
 
-      Command: popular <name>
+      Command: POPULAR <user>
       Displays the most popular user among the given user and their friends.
 
-      Example: popular Mihai
-      Output: Mihai is the most popular
+      Example: POPULAR Michael
+      Output: Michael is the most popular
 
   ## Creating a Post
-      Command: create <username> "<title>"
+      Command: CREATE <username> "<title>"
       Creates a new post with a unique ID.
 
-      Example: create Mihai "Titlu postare"
-      Output: Created "Titlu postare" for Mihai
+      Example: CREATE Michael "My first post"
+      Output: Created "My first post" for Michael
 
   ## Reposting Content
-      Command: repost <username> <post-id> [<repost-id>]
+      Command: REPOST <username> <post-id> [<repost-id>]
       Creates a repost for a post or another repost.
 
-      Example: repost Alex 1 2
+      Example: REPOST Alex 1 2
       Output: Created Repost #10 for Alex
 
   ## Finding Common Reposts
-      Command: common-repost <post> <repost1> <repost2>
+      Command: COMMON-REPOST <post> <repost1> <repost2>
       Finds the first common repost (Lowest Common Ancestor) between two reposts.
 
-      Example: common-repost 1 4 7
+      Example: COMMON-REPOST 1 4 7
       Output: The first common repost of 4 and 7 is 2
 
   ## Likes
-      Command: like <username> <post-id> [<repost-id>]
-      Toggles a like for a post or repost. If the same user likes again, it removes the like.
+      Command: LIKE <username> <post-id> [<repost-id>]
+      Toggles a like for a post or repost. If the same user likes again, the like is removed.
 
       Example:
-      like Alex 0
-      Output: Alex liked "Titlu postare"
-      like Alex 0
-      Output: Alex unliked "Titlu postare"
+      LIKE Alex 0
+      Output: Alex liked "My first post"
+      LIKE Alex 0
+      Output: Alex unliked "My first post"
 
   ## Ratio
-      Command: ratio <post-id>
-      Compares likes between a post and its reposts to see which has higher engagement.
+      Command: RATIO <post-id>
+      Compares likes between a post and its reposts to determine which has more engagement.
 
-      Example: ratio 0
+      Example: RATIO 0
       Output: Post 0 got ratio'd by repost 1
+
       If the original post has more likes:
       Output: The original post is the highest rated
 
   ## Deleting Posts
-      Command: delete <post-id> [<repost-id>]
-      Deletes a post or repost and all its dependent reposts.
+      Command: DELETE <post-id> [<repost-id>]
+      Deletes a post or repost and all of its dependent reposts.
 
-      Example: delete 0
-      Output: Deleted "Titlu postare"
+      Example: DELETE 0
+      Output: Deleted "My first post"
 
   ## Viewing Likes and Reposts
-      Command: get-likes <post-id> [<repost-id>]
+      Command: GET-LIKES <post-id> [<repost-id>]
       Displays the number of likes for a post or repost.
 
       Example:
-      get-likes 1 2
+      GET-LIKES 1 2
       Output: Repost #2 has 5 likes
 
-      Command: get-reposts <post-id>
+      Command: GET-REPOSTS <post-id>
       Displays all reposts under a post or repost in hierarchical order.
 
       Example:
-      get-reposts 1
+      GET-REPOSTS 1
       Output:
       "Cat video" - Post #1 by Alex
       Repost #2 by Alex
@@ -131,72 +134,71 @@ The implementation focuses on modularity, efficient data structures, and correct
       Repost #6 by Alex
 
   ## Feed
-      Command: feed <username> <feed-size>
+      Command: FEED <username> <feed-size>
       Displays the most recent posts made by the user and their friends.
 
       Example:
-      feed Andrei 5
+      FEED Andrew 5
       Output:
-      Luca: "Nu-mi vine sa cred cine a castigat Grand Prix-ul de la Miami"
-      Ana: "Ati auzit ultima melodie a lui Kanye?"
-      Alex: "Buna TPU, merita sa dau la Poli?"
-      Mihnea: "Vand Golf 4"
-      Mihai: "Al doilea"
+      Luke: "I can’t believe who won the Grand Prix in Miami"
+      Anna: "Have you heard Kanye’s new song?"
+      Alex: "Hey TPU, should I apply to Poli?"
+      Matthew: "Selling my Golf 4"
+      Michael: "Second one!"
 
   ## Viewing Profile
-      Command: view-profile <username>
+      Command: VIEW-PROFILE <username>
       Displays all posts and reposts made by a specific user.
 
       Example:
-      view-profile Andrei
+      VIEW-PROFILE Andrew
       Output:
-      Posted: "Prima mea postare"
-      Reposted: "Shaorma e veatza mea"
+      Posted: "My first post"
+      Reposted: "Shawarma is life"
 
   ## Friends That Reposted
-      Command: friends-repost <username> <post-id>
+      Command: FRIENDS-REPOST <username> <post-id>
       Displays which of the user’s friends reposted a specific post.
 
       Example:
-      friends-repost Andrei 5
+      FRIENDS-REPOST Andrew 5
       Output:
       Friends that reposted:
-      Mihai
+      Michael
       Alex
-      Ana
+      Anna
 
   ## Clique Detection
-      Command: common-group <username>
+      Command: COMMON-GROUP <username>
       Finds the largest friend group (clique) that includes the specified user, using the Bron–Kerbosch algorithm.
 
       Example:
-      common-group Alex
+      COMMON-GROUP Alex
       Output:
       The closest friend group of Alex is:
       Alex
-      Ana
-      Ioana
-      Mihai
+      Anna
+      John
+      Michael
 
   ## Exiting the Program
-      Command: exit
+      Command: EXIT
       Ends the program, frees all allocated memory, and stops execution.
 
-      Example: exit
+      Example: EXIT
       Output: (no message shown)
 
 # Brief presentation of the implementation
-
-This project implements a social network simulation using graphs and trees. Below is an explanation of how each feature is implemented:
+This project implements a complete social network simulation using graphs and trees. Below is a detailed explanation of how each feature works:
 
   ## Friendship Management
   Friendships are stored in adjacency lists, with bidirectional links between users.  
-  Adding or removing a friend updates both lists.  
-  The distance between users is calculated using BFS traversal of the friendship graph.  
-  Functions like `common`, `popular`, and `suggestions` rely on adjacency traversal and sorting for display.
+  Adding or removing a friend updates both lists simultaneously.  
+  The distance between users is calculated using BFS traversal.  
+  Functions like `common`, `popular`, and `suggestions` rely on adjacency traversal and sorting by user ID.
 
   ## Post and Repost System
-  Posts and reposts are represented as nodes in a tree.  
+  Posts and reposts are represented as nodes in a tree structure.  
   Each node stores:
   - A unique ID
   - Author name
@@ -204,37 +206,37 @@ This project implements a social network simulation using graphs and trees. Belo
   - Like count
   - List of child reposts
 
-  This structure allows hierarchical reposting, quick traversal, and efficient deletion of subtrees.
+  This structure allows hierarchical reposting, efficient traversal, and full deletion of subtrees.
 
   ## Feed Generation
-  The feed merges the posts of a user and their friends, sorted by recency.  
-  Implemented with linked lists and efficient merging, ensuring linear-time operations even with large inputs.
+  The feed merges the posts of a user and all their friends, sorted by recency.  
+  Implemented using linked lists and priority-based merging for O(n) complexity relative to total posts.
 
   ## Clique Detection
-  The largest fully connected friend group is detected using the Bron–Kerbosch recursive algorithm.  
-  The result includes the queried user and all mutually connected friends.
+  The largest complete friend group is found using the **Bron–Kerbosch algorithm**.  
+  The algorithm identifies maximal cliques in the friendship graph, selecting the one that contains the queried user.
 
   ## Likes and Ratio
   Each post/repost maintains an internal counter for likes.  
-  The `ratio` function compares the original post with all reposts, displaying which one has higher engagement.  
-  In case of equality, the post with the lower ID is preferred.
+  The `ratio` command compares the original post with its reposts and displays the one with higher engagement.  
+  In case of equality, the post with the smallest ID is preferred.
 
   ## Memory Management
-  All dynamically allocated structures (graphs, trees, lists) are freed at program termination.  
-  Valgrind checks confirm no memory leaks after extensive testing.
+  All dynamically allocated data structures (graphs, trees, lists) are properly freed at program termination.  
+  Valgrind testing confirms no memory leaks across 50+ automated scenarios.
 
   ## Modularity and Error Handling
-  Each major component (friends, posts, feed, users) is implemented in a separate C file.  
-  The main file reads input commands using `fgets` and delegates execution.  
-  Invalid commands are handled gracefully, printing descriptive error messages.
+  Each major component (`friends.c`, `posts.c`, `feed.c`, `users.c`) is implemented in a separate source file.  
+  The main function reads commands using `fgets` and delegates them to the correct handler.  
+  Invalid commands are ignored gracefully, with clear feedback to the user.
 
   ## Checker
-  A custom automated checker was implemented to validate functionality.  
-  It includes over **50 automated tests**, checking:
-  - Graph correctness
-  - Repost tree structure
-  - Feed generation
-  - Ratio accuracy
-  - Memory safety (validated with Valgrind)
+  An automated checker was implemented to validate all functionalities.  
+  It includes over **50 tests** verifying:
+  - Graph connectivity  
+  - Repost tree structure  
+  - Feed correctness  
+  - Ratio and like behavior  
+  - Memory stability under Valgrind
 
-  The checker supports both GUI and CLI versions:
+  The checker can be run in GUI or legacy mode:
