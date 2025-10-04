@@ -229,6 +229,9 @@ This project implements a complete social network simulation using graphs and tr
   Each major component (`friends.c`, `posts.c`, `feed.c`, `users.c`) is implemented in a separate source file.  
   The main function reads commands using `fgets` and delegates them to the correct handler.  
   Invalid commands are ignored gracefully, with clear feedback to the user.
+  
+  ## Exit Function
+  The `EXIT` command terminates the main loop, deallocates all memory, and ends the program safely.
 
   ## Checker
   An automated checker was implemented to validate all functionalities.  
