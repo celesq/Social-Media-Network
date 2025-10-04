@@ -1,7 +1,8 @@
 # Social-Media-Network
-I developed the core functionality of a social media platform in **C**, simulating user connections, posts, reposts, likes, feeds, and clique detection using **graphs**, **trees**, and **linked lists**.  
-The project models the internal logic of a real social platform, where users can connect with friends, share and repost content, view their personalized feeds, and interact with other users.  
-All operations are implemented programmatically, without any GUI, focusing on efficiency, modularity, and memory safety.
+I developed the core functionality of a social media platform in **C**, implementing user connections, posts, reposts, likes, feeds, and community detection using **graphs**, **trees**, and **linked lists**.  
+The project leverages **graph-based modeling**, with algorithms such as **Lowest Common Ancestor (LCA)** for repost hierarchy traversal and **Bron–Kerbosch** for clique (community) detection.  
+It was designed with scalability in mind, capable of handling datasets of over **100 users**, **500 friendships**, and **300 posts**, maintaining consistent performance and correctness.  
+All functionality is implemented programmatically, without any GUI, emphasizing efficient data structures, modular architecture, and precise memory management.
 
 # How to Use the Social Media Platform
 
