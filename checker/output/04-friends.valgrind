@@ -1,0 +1,15 @@
+==131074== Memcheck, a memory error detector
+==131074== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==131074== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==131074== Command: ./friends
+==131074== Parent PID: 131031
+==131074== 
+==131074== 
+==131074== HEAP SUMMARY:
+==131074==     in use at exit: 0 bytes in 0 blocks
+==131074==   total heap usage: 1,123 allocs, 1,123 frees, 35,328 bytes allocated
+==131074== 
+==131074== All heap blocks were freed -- no leaks are possible
+==131074== 
+==131074== For lists of detected and suppressed errors, rerun with: -s
+==131074== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
