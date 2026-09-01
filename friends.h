@@ -4,7 +4,7 @@
 #include "users.h"
 
 #define MAX_COMMAND_LEN 500
-#define MAX_PEOPLE 550
+#define MAX_PEOPLE 10000
 
 /**
  * Function that handles the calling of every command from task 1
